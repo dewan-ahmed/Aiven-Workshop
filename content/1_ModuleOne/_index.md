@@ -8,27 +8,27 @@ weight: 1
 
 ## Learning Objectives <!-- MODIFY THIS SUBHEADING -->
 
-This paragraph block should highlight the learning objectives of the workshop. A bulleted list works well for this purpose.
+Today we are going to learn the following topics:
+
+- The idea of a open-source multi-cloud data infrastructure that scales
+- Aiven Platform
+  - Quick overview on the Aiven Platform
+  - Overview of projects, accounts, and managing access using authentication tokens
+  - Service creation on the Aiven Platform   
+- Terraform Provider for Aiven
+  - Quick Terraform overview
+  - Service creation using Terraform Provider for Aiven that you created using the GUI
+  - Multiple data services creation as your development environemtn and use environment files to create a repeatable dev--> prod infrastructure
 
 ## Workshop Structure <!-- MODIFY THIS SUBHEADING -->
-This paragraph block should be utilized to briefly explain the submodules that are going to be presented as well as the approximate total time for the workshop and individual submodules. <br>
 
-For example:
-<ul>
-    <li> Prerequisites *(15 minutes)* </li>
-    <li> Setting up an account for the solution *(15 minutes)* </li>
-    <li> Module 1: Module 1 Title *(30 minutes)* </li>
-    <li> Module 2: Module 2 Title *(30 minutes)* </li>
-    <li> Module 3: Module 3 Title *(30 minutes)* </li>
-</ul>
+This workshop is broken into the sections list below. Estimated time for completing the workshop is 1.5-2 hours. 
 
-{{% notice info %}}
-<p style='text-align: left;'>
-**REMOVE:** With the exception of _index.md, the module folders and filenames should be changed to better reflect their content, i.e. 1_Planning as the folder and 11_HowToBegin as the first submodule. Changing the "weight" value of the header is ultimately what reflects the order the modules are presented.
-</p>
-{{% /notice %}}
-
-**REMOVE:** Every introduction page should include the following warning label.
+- Prerequisites *(10 minutes)*: Set up an Aiven account and install Terraform
+- Module 1: Get familiar with Aiven platform by deploying services *(25 minutes)*
+- Module 2: Configure Terraform Provider for Aiven to deploy services *(30 minutes* 
+- Module 3: Deploy multiple services that forms your development environment *(20 minutes)* 
+- Module 4: Use Terraform environment files to build a repeatable dev--> data infrastructure Title *(30 minutes)*
 
 {{% notice warning %}}
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
