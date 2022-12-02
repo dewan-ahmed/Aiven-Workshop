@@ -1,23 +1,16 @@
 ---
-title: "Self-Guided Setup Instructions" # MODIFY THIS TITLE
+title: "Get familiar with the Aiven console" # MODIFY THIS TITLE
 chapter: true
 weight: 1 # MODIFY THIS VALUE TO REFLECT THE ORDERING OF THE MODULES
 ---
 
-<!-- MORE SUBMODULES CAN BE ADDED TO DIVIDE UP THE SETUP INTO SMALLER SECTIONS -->
-<!-- COPY AND PASTE THIS SUBMODULE FILE, RENAME, AND CHANGE THE CONTENTS AS NECESSARY -->
+# Get familiar with the Aiven console
 
-# AWS Account Setup <!-- MODIFY THIS HEADING -->
+![Aiven Console](/images/aiven_console.png)
 
-## Submodule One Heading <!-- MODIFY THIS SUBHEADING -->
+This is the [Aiven console](https://console.aiven.io/) which you can access with the account you set up in the previous step. The center of the page displays your services and the left navigation offers other menu options like viewing event logs or checking out your account billing. 
 
-This paragraph block can be used to explain how to setup an AWS account. Example content guidance can be found at the bottom of the page.
-
-{{% notice info %}}
-<p style='text-align: left;'>
-**REMOVE:** With the exception of _index.md, the module folders and filenames should be changed to better reflect their content, i.e. 1_Planning as the folder and 11_HowToBegin as the first submodule. Changing the "weight" value of the header is ultimately what reflects the order the modules are presented.
-</p>
-{{% /notice %}}
+The **Create service** button on the top-right corner is something you'll interact a lot with if you create services from the console. 
 
 ### Next Section Heading <!-- MODIFY THIS HEADING -->
 This paragraph block can optionally be utilized to lead into the next section of the workshop.

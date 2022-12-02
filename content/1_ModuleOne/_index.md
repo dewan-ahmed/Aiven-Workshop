@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Prerequisites and set up"
 chapter: true
 weight: 1
 ---
@@ -24,15 +24,15 @@ Today we are going to learn the following topics:
 
 This workshop is broken into the sections list below. Estimated time for completing the workshop is 1.5-2 hours. 
 
-- Prerequisites *(10 minutes)*: Set up an Aiven account and install Terraform
-- Module 1: Get familiar with Aiven platform by deploying services *(25 minutes)*
-- Module 2: Configure Terraform Provider for Aiven to deploy services *(30 minutes* 
-- Module 3: Deploy multiple services that forms your development environment *(20 minutes)* 
-- Module 4: Use Terraform environment files to build a repeatable dev--> data infrastructure Title *(30 minutes)*
+- Module 1: Prerequisites - Set up an Aiven account and install Terraform *(10 minutes)*
+- Module 2: Get familiar with Aiven platform by deploying services *(25 minutes)*
+- Module 3: Configure Terraform Provider for Aiven to deploy services *(30 minutes* 
+- Module 4: Deploy multiple services that forms your development environment *(20 minutes)* 
+- Module 5: Use Terraform environment files to build a repeatable dev--> data infrastructure Title *(30 minutes)*
 
 {{% notice warning %}}
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
 {{% /notice %}}
 
-### Next Section Heading <!-- MODIFY THIS HEADING -->
-This paragraph block can optionally be utilized to lead into the next section of the workshop.
+### Coming up - Foreward <!-- MODIFY THIS HEADING -->
+In the next section, you will read an overview of the problem we're solving in this workshop.

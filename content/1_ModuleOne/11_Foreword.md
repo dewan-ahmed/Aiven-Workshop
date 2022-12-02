@@ -6,21 +6,11 @@ weight: 1 # MODIFY THIS VALUE TO REFLECT THE ORDERING OF THE MODULES IF APPLICAB
 
 # Foreword <!-- MODIFY THIS HEADING IF APPLICABLE -->
 
-## Submodule One Heading <!-- MODIFY THIS SUBHEADING -->
+What do we mean by data infrastructure? Data infrastructure includes all of your services to store, transmit, and monitor the data. This can include a relational database like PostgreSQL®, a key-value store like Redis®* or Apache Cassandra®, data streaming service like Apache Kafka®, or a visualization service like Grafana®. 
 
-This paragraph block should be an explanation of an existing problem and how the partner has worked to achieve a solution for it. Example content guidance can be found at the bottom of this page.
+Most engineering teams have disparate services running for their data services which make provisioning, configuring, and monitoring incredibly difficuly. With Aiven platform, you can deploy Apache Kafka®, Apache Cassandra®, PostgreSQL®, Apache Flink® beta, ClickHouse® (beta), OpenSearch®, MySQL, Redis®*, InfluxDB®, Grafana®, and M3 - all available in more than 23 AWS regions around the world and manageable from one single Aiven platform.
 
-{{% notice info %}}
-<p style='text-align: left;'>
-**REMOVE:** With the exception of _index.md, the module folders and filenames should be changed to better reflect their content, i.e. 1_Planning as the folder and 11_HowToBegin as the first submodule. Changing the "weight" value of the header is ultimately what reflects the order the modules are presented.
-</p>
-{{% /notice %}}
+However, it's difficult to scale when you create services from a web console or via custom scripts. That's why, Terraform Provider for Aiven will help you build, configure, and tear down your infrastructure declaratively. Terraform is HashiCorp’s open source infrastructure as code tool that lets you define resources and infrastructure in human-readable files and manages your infrastructure’s lifecycle.
 
-### Next Section Heading <!-- MODIFY THIS HEADING -->
-This paragraph block can optionally be utilized to lead into the next section of the workshop.
-
-#### Example Content Guidance
-
-# The nature of software development has fundamentally changed
-
-Teams and organizations are releasing code at a record breaking pace and only getting faster. This is primarily attributed to these teams adopting and implementing modern concepts and practices, such as Continuous Delivery, Continuous Integration/Deployments (CI/CD) and DevOps into their software development processes. These modern concepts enable teams to better align development and delivery efforts resulting in teams collaborating around code and an increased awareness among collaborators no matter their role.
+### Coming up - Create an Aiven account 
+In the next section, you will set up an Aiven account and get familiar with the Aiven console.
