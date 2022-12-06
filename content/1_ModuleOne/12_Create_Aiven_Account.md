@@ -13,5 +13,5 @@ There are four simple steps to sign up for a free account on Aiven.
 3. Add some more details about you (your name, company, and the country where you live in).
 4. Follow the link on the confirmation email.
 
-### Install Terraform 
+### Coming up - Install Terraform 
 In the next section, you will install the Terraform CLI client on your local machine.

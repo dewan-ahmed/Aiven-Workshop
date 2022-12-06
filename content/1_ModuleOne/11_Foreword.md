@@ -1,10 +1,10 @@
 ---
-title: "Foreword" # MODIFY THIS TITLE IF APPLICABLE
+title: "Foreword"
 chapter: true
-weight: 1 # MODIFY THIS VALUE TO REFLECT THE ORDERING OF THE MODULES IF APPLICABLE
+weight: 1 
 ---
 
-# Foreword <!-- MODIFY THIS HEADING IF APPLICABLE -->
+# Foreword 
 
 What do we mean by data infrastructure? Data infrastructure includes all of your services to store, transmit, and monitor the data. This can include a relational database like PostgreSQL®, a key-value store like Redis®* or Apache Cassandra®, data streaming service like Apache Kafka®, or a visualization service like Grafana®. 
 

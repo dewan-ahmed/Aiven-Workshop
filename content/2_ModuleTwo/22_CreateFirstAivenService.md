@@ -4,6 +4,8 @@ chapter: true
 weight: 2
 ---
 
+# Create your first Aiven service
+
 When you create an Aiven service using the Aiven CLI, Aiven Operator or Terraform Provider for Aiven, you have to provide an authentication token - a credential that allows a user to programmatically access resources instead of using their username and password. However, when you create the service from Aiven console, you are already authenticated and don't have to provide an authentication token.
 
 Let's create an Aiven for Redis®* service by following these steps:
@@ -17,6 +19,9 @@ Let's create an Aiven for Redis®* service by following these steps:
 7. The **connection information** provides host, port, and the credentials for you to connect to your newly created service. You can also take advantage of the **Quick connect** button which will show you commands/code to connect to the Redis service using redis-cli or a choice of programming language.
 
 ![Redis Quick Connect](/images/redis-quick-connect.png)
+
+### Coming up - Create multiple Aiven services
+In the next section, you'll create multiple Aiven services from the Aiven console and connect them with service integration.
 
 
 {{% notice note %}}

@@ -1,12 +1,12 @@
 ---
-title: "Create an Aiven service using Terraform"
+title: "Create Aiven services using Terraform"
 chapter: true
 weight: 3
 ---
 
-# Create an Aiven service using Terraform
+# Create Aiven services using Terraform
 
-In this section, you'll create an Aiven for Redis™* service using Terraform. If you recall, you created this service in the previous module from the console. The difference is that you'll be creating the service without clicking buttons and in a programmatic way.
+In this module, you'll create Aiven services using Terraform. These are the same services you created in the previous module using the console. The difference is that you'll be creating the services without clicking buttons and in a programmatic way.
 
 {{% notice warning %}}
 The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various AWS services can be architected to build a solution while demonstrating best practices along the way. These examples are not intended for use in production environments.
@@ -14,3 +14,6 @@ The examples and sample code provided in this workshop are intended to be consum
 
 ### Create an Aiven authentication token
 In the next section, you'll generate an Aiven authentication token that will be needed to make any Aiven API call using Terraform.
+
+### Coming up - Create an authentication token
+In the next section, you will create an Aiven authentication token.

@@ -119,3 +119,6 @@ Since this was a test environment, be sure to delete the resources once you're d
 ```
 
 You'll need to type in **yes** to confirm.
+
+### Coming up - Create multiple Aiven services using Terraform
+In the next section, you will create multiple Aiven services and connect them using service integration - all using Aiven Terraform Provider.

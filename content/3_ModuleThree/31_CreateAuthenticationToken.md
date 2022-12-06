@@ -16,3 +16,6 @@ weight: 1
 Alternatively, you can generate an authentication token using [Aiven CLI](https://docs.aiven.io/docs/tools/cli/user/user-access-token.html#avn-user-access-token-create) as well.
 
 On the top-left corner, right under the Aiven console logo, you'll see the name of your Aiven project. Make a note of it as you'll need it in the next section.
+
+### Coming up - Create a Aiven for Redis service using Terraform
+In the next section, you will create an Aiven for Redis service using Terraform.
