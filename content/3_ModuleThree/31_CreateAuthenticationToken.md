@@ -10,7 +10,7 @@ weight: 1
 
 1. Once you log in to the [Aiven console](https://console.aiven.io), click on the **User Information** button on the top-right corner.
 2. From the **Authentication** tab, click on **Generate token**.
-3. Give your token an optional description and provide a number for the **Max age hours**. This is the number of hours after which your token will be expired. If you don't want the token to expire, leave this field empty.
+3. Give your token an optional description and provide a number for the **Max age hours**. This is the number of hours after which your token will be expired. To cover the duration of this workshop, you can set the **Max age hours** to **3**. If you don't want the token to expire, leave this field empty.
 4. Click on **Generate token** and make a note of the token since you'll never be able to see the value of the token again.
 
 Alternatively, you can generate an authentication token using [Aiven CLI](https://docs.aiven.io/docs/tools/cli/user/user-access-token.html#avn-user-access-token-create) as well.
