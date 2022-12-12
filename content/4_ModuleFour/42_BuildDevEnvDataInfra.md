@@ -42,11 +42,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "plan_name" {
-  description = "Aiven plan type"
-  type        = string
-}
-
 variable "db_username" {
   description = "Database administrator username"
   type        = string
@@ -77,8 +72,8 @@ Because this is a demo, you'll be using the same database username/password for 
 // This creates the PostgreSQL service
 resource "aiven_pg" "postgres_service" {
   project                 = var.project_name
-  service_name            = "postgres-gcp-montreal"
-  cloud_name              = "google-northamerica-northeast1"
+  service_name            = "postgres-aws-us"
+  cloud_name              = "aws-us-east-1"
   plan                    = "startup-4"
   maintenance_window_dow  = "saturday"
   maintenance_window_time = "10:00:00"
@@ -102,8 +97,8 @@ resource "aiven_pg_user" "postgres_admin_user" {
 // This creates the ClickHouse service
 resource "aiven_clickhouse" "clickhouse_service" {
   project                 = var.project_name
-  service_name            = "clickhouse-gcp-montreal"
-  cloud_name              = "google-northamerica-northeast1"
+  service_name            = "clickhouse-aws-us"
+  cloud_name              = "aws-us-east-1"
   plan                    = "startup-beta-8" // special plan name for beta service
   maintenance_window_dow  = "saturday"
   maintenance_window_time = "10:00:00"
@@ -127,9 +122,9 @@ resource "aiven_service_integration" "clickhouse_postgres_source" {
 // This creates the Redis service
 resource "aiven_redis" "redis_service" {
   project                 = var.project_name
-  cloud_name              = "google-northamerica-northeast1"
+  cloud_name              = "aws-us-east-1"
   plan                    = "startup-4"
-  service_name            = "redis-gcp-montreal"
+  service_name            = "redis-aws-us"
   maintenance_window_dow  = "saturday"
   maintenance_window_time = "10:00:00"
 
