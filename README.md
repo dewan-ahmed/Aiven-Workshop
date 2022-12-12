@@ -3,10 +3,7 @@
 This workshop was created from [AWS workshop sample](https://aws-samples.github.io/aws-modernization-workshop-sample) and aims to educate learners about data infrastructure creation and management using Terraform. To run this workshop locally, follow [these instructions](https://aws-samples.github.io/aws-modernization-workshop-sample/20_build/3_testing/).
 
 ## Versions
- * DRAFT
-    * Draft version:
-    Sections are being added frequently. This workshop will be versioned once all the initial modules are added.
-
+ * 1.0 [2022-12-12] - All 5 modules added. TODO: A summary/outro section.    
 
 ## Description
 
