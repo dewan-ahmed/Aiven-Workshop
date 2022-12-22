@@ -1,10 +1,10 @@
 ---
-title: "Create Aiven for Redis™* using Terraform"
+title: "Create Aiven for Redis using Terraform"
 chapter: true
 weight: 2
 ---
 
-# Create an Aiven for Redis™* service using Terraform
+# Create an Aiven for Redis service using Terraform
 
 Your Terraform files declare the structure of your infrastructure as well as required dependencies and configuration. While you can stuff these together in one file, it's ideal to keep those as separate files. 
 
@@ -70,19 +70,9 @@ The contents of the **redis.tf** file should look like this:
     
     resource "aiven_redis" "single-node-aiven-redis" {
       project                 = var.project_name
-      cloud_name              = "google-northamerica-northeast1"
+      cloud_name              = "aws-us-east-1"
       plan                    = "startup-4"
-      service_name            = "gcp-single-node-redis1"
-      maintenance_window_dow  = "monday"
-      maintenance_window_time = "10:00:00"
-    
-      redis_user_config {
-        redis_maxmemory_policy = "allkeys-random"
-    
-        public_access {
-          redis = true
-        }
-      }
+      service_name            = "aws-us-redis"
     }
 ```   
     

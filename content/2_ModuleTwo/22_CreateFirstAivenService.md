@@ -8,10 +8,10 @@ weight: 2
 
 When you create an Aiven service using the Aiven CLI, Aiven Operator or Terraform Provider for Aiven, you have to provide an authentication token - a credential that allows a user to programmatically access resources instead of using their username and password. However, when you create the service from Aiven console, you are already authenticated and don't have to provide an authentication token.
 
-Let's create an Aiven for Redis®* service by following these steps:
+Let's create an Aiven for Redis service by following these steps:
 
 1. Click on **Create service**.
-2. Select **Redis™*** from the list of services, choose **AWS** from the list of cloud providers, and select a cloud region that might be closer to you.
+2. Select **Redis** from the list of services, choose **AWS** from the list of cloud providers, and select a cloud region that might be closer to you.
 3. Under "Select Service Plan" you can choose a plan based on your compute, storage, and backup needs. For this workshop, let's choose **Startup-8** plan.
 4. Give your service a name and then review the **Service Summary** shown on the right hand side.
 5. If you're satisfied, hit **Create service** and this will start the process of service creation.

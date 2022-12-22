@@ -79,51 +79,27 @@ The contents of the **services.tf** file should look like this:
 
     resource "aiven_pg" "demo-pg" {
       project                 = var.project_name
-      cloud_name              = "google-northamerica-northeast1"
+      cloud_name              = "aws-us-east-1"
       plan                    = "startup-8"
       service_name            = join("-", [var.service_name_prefix, "postgres"])
-      termination_protection  = false
-      maintenance_window_dow  = "sunday"
-      maintenance_window_time = "10:00:00"
     }
 
     # M3DB Service
 
     resource "aiven_m3db" "demo-m3db" {
       project                 = var.project_name
-      cloud_name              = "google-northamerica-northeast1"
+      cloud_name              = "aws-us-east-1"
       plan                    = "startup-8"
       service_name            = join("-", [var.service_name_prefix, "m3db"])
-      maintenance_window_dow  = "sunday"
-      maintenance_window_time = "10:00:00"
-
-      m3db_user_config {
-        m3db_version = 1.1
-
-        namespaces {
-          name = "my_ns1"
-          type = "unaggregated"
-        }
-      }
     }
 
     # Grafana Service
 
     resource "aiven_grafana" "demo-grafana" {
       project                 = var.project_name
-      cloud_name              = "google-northamerica-northeast1"
+      cloud_name              = "aws-us-east-1"
       plan                    = "startup-8"
       service_name            = join("-", [var.service_name_prefix, "grafana"])
-      maintenance_window_dow  = "sunday"
-      maintenance_window_time = "10:00:00"
-
-      grafana_user_config {
-        alerting_enabled = true
-
-        public_access {
-          grafana = true
-        }
-      }
     }
 
     # PostgreSQL-M3DB Metrics Service Integration

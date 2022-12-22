@@ -31,27 +31,13 @@ plan_name       = "business-4"
 Let's add four resources to the existing blueprint from the development environment: an Apache Kafka service and three Apache Kafka topics.
 
 ```
-# Kafka service
-
 resource "aiven_kafka" "kafka-service" {
   project                 = var.project_name
   cloud_name              = "aws-us-east-1"
   plan                    = var.plan_name
   service_name            = "kafka-aws-us"
-  maintenance_window_dow  = "monday"
-  maintenance_window_time = "10:00:00"
-  kafka_user_config {
-    kafka_connect = true
-    kafka_rest    = true
-    kafka_version = "3.2"
-    kafka {
-      group_max_session_timeout_ms = 70000
-      log_retention_bytes          = 1000000000
-    }
-  }
 }
 
-# Kafka topic A
 resource "aiven_kafka_topic" "kafka-topic-a" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name
@@ -60,7 +46,6 @@ resource "aiven_kafka_topic" "kafka-topic-a" {
   replication  = 2
 }
 
-# Kafka topic B
 resource "aiven_kafka_topic" "kafka-topic-b" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name
@@ -69,7 +54,6 @@ resource "aiven_kafka_topic" "kafka-topic-b" {
   replication  = 2
 }
 
-# Kafka topic C
 resource "aiven_kafka_topic" "kafka-topic-c" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name
@@ -83,25 +67,19 @@ The final Terraform **services.tf** file will look something like this:
 
 
 ```
-// This creates the PostgreSQL service
-
 resource "aiven_pg" "postgres_service" {
   project                 = var.project_name
   service_name            = "postgres-aws-us"
   cloud_name              = "aws-us-east-1"
   plan                    = var.plan_name
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
 }
 
-// This creates the relational PostgreSQL database
 resource "aiven_pg_database" "relational_database" {
   project       = var.project_name
   service_name  = aiven_pg.postgres_service.service_name
   database_name = "relational_database"
 }
 
-// This creates the PostgreSQL admin user
 resource "aiven_pg_user" "postgres_admin_user" {
   service_name = aiven_pg.postgres_service.service_name
   project      = var.project_name
@@ -109,18 +87,13 @@ resource "aiven_pg_user" "postgres_admin_user" {
   password     = var.db_password
 }
 
-// This creates the ClickHouse service
 resource "aiven_clickhouse" "clickhouse_service" {
   project                 = var.project_name
   service_name            = "clickhouse-aws-us"
   cloud_name              = "aws-us-east-1"
-  plan                    = "business-beta-8" // special plan name for beta service
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
+  plan                    = "business-8"
 }
 
-
-// ClickHouse service integration for the PostgreSQL service as a source
 resource "aiven_service_integration" "clickhouse_postgres_source" {
   project                  = var.project_name
   integration_type         = "clickhouse_postgresql"
@@ -134,25 +107,13 @@ resource "aiven_service_integration" "clickhouse_postgres_source" {
   }
 }
 
-// This creates the Redis service
 resource "aiven_redis" "redis_service" {
   project                 = var.project_name
   cloud_name              = "aws-us-east-1"
   plan                    = var.plan_name
   service_name            = "redis-aws-us"
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
-
-  redis_user_config {
-    redis_maxmemory_policy = "allkeys-random"
-
-    public_access {
-      redis = true
-    }
-  }
 }
 
-// This creates the Redis admin user
 resource "aiven_redis_user" "redis_admin_user" {
   service_name = aiven_redis.redis_service.service_name
   project      = var.project_name
@@ -160,27 +121,13 @@ resource "aiven_redis_user" "redis_admin_user" {
   password     = var.db_password
 }
 
-# Kafka service
-
 resource "aiven_kafka" "kafka-service" {
   project                 = var.project_name
   cloud_name              = "aws-us-east-1"
   plan                    = var.plan_name
   service_name            = "kafka-aws-us"
-  maintenance_window_dow  = "monday"
-  maintenance_window_time = "10:00:00"
-  kafka_user_config {
-    kafka_connect = true
-    kafka_rest    = true
-    kafka_version = "3.2"
-    kafka {
-      group_max_session_timeout_ms = 70000
-      log_retention_bytes          = 1000000000
-    }
-  }
 }
 
-# Kafka topic A
 resource "aiven_kafka_topic" "kafka-topic-a" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name
@@ -189,7 +136,6 @@ resource "aiven_kafka_topic" "kafka-topic-a" {
   replication  = 2
 }
 
-# Kafka topic B
 resource "aiven_kafka_topic" "kafka-topic-b" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name
@@ -198,7 +144,6 @@ resource "aiven_kafka_topic" "kafka-topic-b" {
   replication  = 2
 }
 
-# Kafka topic C
 resource "aiven_kafka_topic" "kafka-topic-c" {
   project      = var.project_name
   service_name = aiven_kafka.kafka-service.service_name

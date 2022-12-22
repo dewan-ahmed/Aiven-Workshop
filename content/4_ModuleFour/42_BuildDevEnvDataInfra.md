@@ -75,8 +75,6 @@ resource "aiven_pg" "postgres_service" {
   service_name            = "postgres-aws-us"
   cloud_name              = "aws-us-east-1"
   plan                    = "startup-4"
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
 }
 
 // This creates the relational PostgreSQL database
@@ -99,9 +97,7 @@ resource "aiven_clickhouse" "clickhouse_service" {
   project                 = var.project_name
   service_name            = "clickhouse-aws-us"
   cloud_name              = "aws-us-east-1"
-  plan                    = "startup-beta-8" // special plan name for beta service
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
+  plan                    = "startup-8" 
 }
 
 
@@ -125,16 +121,6 @@ resource "aiven_redis" "redis_service" {
   cloud_name              = "aws-us-east-1"
   plan                    = "startup-4"
   service_name            = "redis-aws-us"
-  maintenance_window_dow  = "saturday"
-  maintenance_window_time = "10:00:00"
-
-  redis_user_config {
-    redis_maxmemory_policy = "allkeys-random"
-
-    public_access {
-      redis = true
-    }
-  }
 }
 
 // This creates the Redis admin user
