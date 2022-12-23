@@ -32,7 +32,7 @@ Add the following to a new **provider.tf** file:
    }
 ```
 
-You can also set the environment variable **AIVEN_TOKEN** for the **api_token** property. With this, you don't need to pass the **-var-file** flag when executing Terraform commands.
+You can also set the environment variable **TF_VAR_aiven_api_token** for the **api_token** property. With this, you don't need to pass the **-var-file** flag when executing Terraform commands.
  
 2. To avoid including sensitive information in source control, the variables are defined in the **variables.tf** file. You can then use a ***.tfvars** file with the actual values so that Terraform receives the values during runtime, and exclude it.
 
